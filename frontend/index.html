@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lomax | Gestión de Productos</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ==============================
+     HEADER
+=============================== -->
+
+<header class="site-header">
+
+    <div class="container header-content">
+
+        <!-- LOGO -->
+
+        <a href="#" class="brand">
+
+            <span class="brand-icon">
+                L
+            </span>
+
+            <div class="brand-text">
+
+                <strong>
+                    Lomax
+                </strong>
+
+                <small>
+                    Gestión de productos
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav class="main-nav">
+
+            <a
+                href="#registro"
+                class="nav-link"
+            >
+                <span class="nav-icon">＋</span>
+                Registrar
+            </a>
+
+            <a
+                href="#catalogo"
+                class="nav-link"
+            >
+                <span class="nav-icon">▦</span>
+                Catálogo
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+    =============================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div>
+
+                    <span class="eyebrow">
+                        PLATAFORMA LOMAX
+                    </span>
+
+                    <h1>
+                        Gestiona tus productos
+                        <span>de forma sencilla.</span>
+                    </h1>
+
+                    <p>
+                        Registra productos, agrega sus características,
+                        gestiona imágenes y consulta el catálogo publicado.
+                    </p>
+
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="hero-card-icon">
+                        📦
+                    </div>
+
+                    <div>
+                        <strong>Catálogo de productos</strong>
+
+                        <span>
+                            Tecnología · Hogar · Oficina
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             REGISTRO
+        =============================== -->
+
+        <section id="registro" class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-number">01</span>
+
+                        <div>
+                            <h2>Registrar producto</h2>
+
+                            <p>
+                                Ingresa la información del nuevo producto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <span class="required-note">
+                        * Campos obligatorios
+                    </span>
+
+                </div>
+
+
+                <form id="producto-form">
+
+
+                    <!-- INFORMACIÓN GENERAL -->
+
+                    <div class="form-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <h3>Información general</h3>
+
+                                <p>
+                                    Datos principales del producto.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <!-- Código -->
+
+                            <div class="form-group">
+
+                                <label for="codigo">
+                                    Código <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="codigo"
+                                    name="codigo"
+                                    maxlength="20"
+                                    required
+                                    placeholder="Ej. TEC008"
+                                >
+
+                                <small>
+                                    Máximo 20 caracteres.
+                                </small>
+
+                            </div>
+
+
+                            <!-- Nombre -->
+
+                            <div class="form-group">
+
+                                <label for="nombre">
+                                    Nombre <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    maxlength="150"
+                                    required
+                                    placeholder="Ej. Teclado mecánico"
+                                >
+
+                            </div>
+
+
+                            <!-- Precio -->
+
+                            <div class="form-group">
+
+                                <label for="precio">
+                                    Precio <span>*</span>
+                                </label>
+
+                                <div class="input-with-prefix">
+
+                                    <span>Bs/</span>
+
+                                    <input
+                                        type="number"
+                                        id="precio"
+                                        name="precio"
+                                        min="0"
+                                        step="0.01"
+                                        required
+                                        placeholder="0.00"
+                                    >
+
+                                </div>
+
+                                <small>
+                                    El precio no puede ser negativo.
+                                </small>
+
+                            </div>
+
+
+                            <!-- Categoría -->
+
+                            <div class="form-group">
+
+                                <label for="categoria">
+                                    Categoría <span>*</span>
+                                </label>
+
+                                <select
+                                    id="categoria"
+                                    name="categoria"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona una categoría
+                                    </option>
+
+                                </select>
+
+                                <small>
+                                    La categoría será cargada desde la API.
+                                </small>
+
+                            </div>
+
+
+                            <!-- Descripción -->
+
+                            <div class="form-group full-width">
+
+                                <label for="descripcion">
+                                    Descripción <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="descripcion"
+                                    name="descripcion"
+                                    rows="5"
+                                    required
+                                    placeholder="Describe las principales características del producto..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ATRIBUTOS -->
+
+                    <div class="form-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <h3>Atributos del producto</h3>
+
+                                <p>
+                                    Agrega características específicas según el tipo de producto.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="attribute-info">
+                            <p>
+                                Los atributos pueden variar según el producto.
+                                Por ejemplo: color, conexión, capacidad, resolución,
+                                material, tamaño, etc.
+                            </p>
+
+                        </div>
+
+
+                        <div id="atributos-container">
+
+                            <div class="attribute-row">
+
+                                <div>
+
+                                    <label>
+                                        Nombre del atributo
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="atributo-nombre"
+                                        placeholder="Ej. Color"
+                                    >
+
+                                </div>
+
+
+                                <div>
+
+                                    <label>
+                                        Valor
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="atributo-valor"
+                                        placeholder="Ej. Negro"
+                                    >
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="btn-remove"
+                                    onclick="eliminarAtributo(this)"
+                                >
+                                    ×
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="btn-agregar-atributo"
+                            class="btn-add"
+                        >
+                            <span>+</span>
+                            Agregar atributo
+                        </button>
+
+                    </div>
+
+
+                    <!-- IMAGEN -->
+
+                    <div class="form-card">
+
+                        <div class="card-heading">
+
+                            <div class="heading-icon">
+                                🖼️
+                            </div>
+
+                            <div>
+                                <h3>Fotografía del producto</h3>
+
+                                <p>
+                                    Selecciona una imagen para el producto.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <label
+                            for="imagen"
+                            class="upload-area"
+                        >
+
+                            <div class="upload-icon">
+                                ↑
+                            </div>
+
+                            <strong>
+                                Selecciona una imagen
+                            </strong>
+
+                            <span>
+                                JPG, JPEG o PNG · Máximo 5 MB
+                            </span>
+
+                            <input
+                                type="file"
+                                id="imagen"
+                                name="imagen"
+                                accept="image/jpeg,image/png"
+                                required
+                            >
+
+                        </label>
+
+
+                        <!-- PREVIEW -->
+
+                        <div
+                            id="preview-container"
+                            class="preview-container hidden"
+                        >
+
+                            <span>Vista previa</span>
+
+                            <img
+                                id="imagen-preview"
+                                src=""
+                                alt="Vista previa del producto"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MENSAJE -->
+
+                    <div
+                        id="mensaje"
+                        class="message hidden"
+                        role="alert"
+                    ></div>
+
+
+                    <!-- ESTADO -->
+
+                    <div class="status-card">
+
+                        <div class="status-indicator"></div>
+
+                        <div>
+
+                            <strong>Estado del registro</strong>
+
+                            <p id="estado-registro">
+                                Esperando información...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCIONES -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="reset"
+                            class="btn-cancel"
+                        >
+                            Limpiar formulario
+                        </button>
+
+                        <button
+                            type="button"
+                            id="btn-reintentar"
+                            class="btn-secondary hidden"
+                        >
+                            Reintentar
+                        </button>
+
+                        <button
+                            type="submit"
+                            id="btn-registrar"
+                            class="btn-primary"
+                        >
+                            Registrar producto
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CATÁLOGO
+        =============================== -->
+
+        <section
+            id="catalogo"
+            class="catalog-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Catálogo
+                            </h2>
+
+                            <p>
+                                Productos disponibles en Lomax.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="catalog-refresh"
+                    >
+                        ↻ Actualizar
+                    </button>
+
+                </div>
+
+
+                <!-- FILTROS -->
+
+                <div class="catalog-toolbar">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="buscar-producto"
+                            placeholder="Buscar producto..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtro-categoria">
+
+                        <option value="">
+                            Todas las categorías
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRODUCTOS -->
+
+                <div
+                    id="catalogo-container"
+                    class="product-grid"
+                >
+
+                    <!-- Producto de ejemplo visual -->
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="product-status">
+                                PUBLICADO
+                            </span>
+
+                            <div class="placeholder-image">
+                                📦
+                            </div>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Tecnología
+                            </span>
+
+                            <h3>
+                                Producto de ejemplo
+                            </h3>
+
+                            <p>
+                                Aquí aparecerán los productos publicados
+                                desde la API.
+                            </p>
+
+                            <div class="product-footer">
+
+                                <strong>
+                                    Bs/ 0.00
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="btn-detail"
+                                >
+                                    Ver detalle →
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div>
+
+                <strong>Lomax</strong>
+
+                <p>
+                    Sistema de gestión y catálogo de productos.
+                </p>
+
+            </div>
+
+            <span>
+                Tecnologías Emergentes I
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
