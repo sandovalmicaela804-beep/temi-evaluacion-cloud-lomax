@@ -1,0 +1,15 @@
+{
+  "producto_id": {
+    "N": "2"
+  },
+  "atributos": {
+    "M": {
+      "pulgadas": {
+        "N": "24"
+      },
+      "resolucion": {
+        "S": "1920x1080"
+      }
+    }
+  }
+}

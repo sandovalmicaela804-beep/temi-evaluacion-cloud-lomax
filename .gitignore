@@ -1,0 +1,24 @@
+# Dependencias Node
+node_modules/
+**/node_modules/
+
+# Archivos ZIP generados
+*.zip
+
+# Respuestas temporales de pruebas
+response.json
+prueba-response.json
+**/response.json
+**/prueba-response*.json
+
+# Variables y credenciales
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp

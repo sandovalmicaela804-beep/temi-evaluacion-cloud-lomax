@@ -1,0 +1,15 @@
+{
+  "producto_id": {
+    "N": "1"
+  },
+  "atributos": {
+    "M": {
+      "conexion": {
+        "S": "USB"
+      },
+      "distribucion": {
+        "S": "Español"
+      }
+    }
+  }
+}
